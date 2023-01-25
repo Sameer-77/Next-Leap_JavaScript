@@ -30,7 +30,7 @@ const obj3 = {
         cDuration: "34hrs"
     }
 }
-console.log("**********************************");
+console.log("**************************************");
 console.log("4)AFTER CREATION OF OBJECT INSIDE AN OBJECT\n", obj3);
 console.log(obj3.cName);
 function objfunc() {
@@ -48,3 +48,28 @@ console.log("5)CREATING OBJECTS INSIDE FUNCTION");
 const obj5 = objfunc();
 console.log(obj5);
 obj5.buyAt();
+console.log("***********************************************");
+console.log("6)PASSING ARGUMENTS TO A FUNCTION WHICH HAS OBJECT")
+function createCourse(title){
+    return {
+        title:title,
+        enroll(){
+            console.log("You are enrolled...");
+        }
+    }
+}
+const course = createCourse("JavaScript");
+console.log(course);
+function Course(title){
+    this.title = title,
+    this.enroll = function(){
+        console.log("You are feeling happy...");
+    }
+}
+console.log("********************************************");
+const c = new Course("PYTHON");
+console.log("7)CONSTRUCTOR");
+console.log(c);
+c.enroll();
+console.log("**********************************************");
+console.log("8)DELETING AN ITEM\n",delete course.title);
