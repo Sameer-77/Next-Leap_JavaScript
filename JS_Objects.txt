@@ -1,0 +1,50 @@
+//Creation of Object
+console.log("***********************************");
+const obj1 = { name: "Sameer", id: 123, course: "JavaScript" };
+console.log("1)AFTER CREATION OF OBJECT\n", obj1);
+console.log("***********************************");
+//Adding an item to an object
+obj1.Enrolled = "Yes";
+obj1.Address = "Banglore";
+console.log("2)AFTER ADDING AN ITEM TO AN OBJECT\n", obj1);
+console.log("**********************************");
+const obj2 = {
+    name: "Shaik",
+    id: 345,
+    college: "Presidency",
+    message: function () {
+        console.log("Hello world...!!!");
+    }
+}
+console.log("3)FUNCTION INSIDE AN OBJECT");
+console.log(obj2);
+console.log("Function message is");
+obj2.message();
+const obj3 = {
+    cName: 'Java',
+    cId: 789,
+    cDuration: "12hrs",
+    obj4: {
+        cName: "AIML",
+        cId: 142,
+        cDuration: "34hrs"
+    }
+}
+console.log("**********************************");
+console.log("4)AFTER CREATION OF OBJECT INSIDE AN OBJECT\n", obj3);
+console.log(obj3.cName);
+function objfunc() {
+    return {
+        fruit: "Banana",
+        price: 567,
+        quantity: "3Kg",
+        buyAt() {
+            console.log("You can buy at 450..");
+        }
+    }
+}
+console.log("*******************************************");
+console.log("5)CREATING OBJECTS INSIDE FUNCTION");
+const obj5 = objfunc();
+console.log(obj5);
+obj5.buyAt();
