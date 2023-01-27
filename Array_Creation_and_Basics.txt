@@ -1,0 +1,80 @@
+console.log("******************ARRAY CREATION AND BASICS***********************");
+const array = [99,100,190,87,76,65,34,22,111,654,76,23,897,66,876,1452];
+console.log("---------Printing array---------");
+console.log(array);
+console.log("---------Array length-----------\n", array.length);
+console.log("------------ACCESSING ARRAY ELEMENTS----------------");
+console.log(array[6]);
+console.log("-----------PUSH--------------");
+array.push("Helloooo");
+console.log(array);
+console.log("------------POP------------------\n");
+array.pop();
+console.log(array);
+console.log("---------------SHIFT----------------\n");
+array.shift();
+console.log(array);
+console.log("-----------------UNSHIFT--------------\n");
+array.unshift("Hello World");
+console.log(array);
+console.log("-------------------------DELETE-------------------\n");
+delete array[3];
+console.log("Deleted element is ",array[3]);
+console.log("--------------UPDATING ARRAY VALUES----------");
+array[3] = 9876;
+console.log(array);
+console.log("---------------ARRAY TO STRING-----------------\n");
+let k = array.toString();
+console.log(k+"\n"+typeof(k));
+console.log("-------------ARRAY CONCATENATION-----------------\n");
+const arr1 = ["sameer",'Basha',"Shaik"];
+let arr2 = [1,2,3,4,5];
+var arr3 = arr1.concat(arr2);
+console.log(arr3);
+console.log("--------------MERGING 3 ARRAYS-------------------\n");
+const arr4 = arr1.concat(arr2,arr3);
+console.log(arr4);
+console.log("-------------SLICE AND SPLICE---------------------\n");
+/*The first parameter (2) defines the position where new elements
+should be added (spliced in).
+The second parameter (0) defines how many elements should be removed
+The rest of the parameters ("Lemon" , "Kiwi") define the new
+elements to be added.
+The splice() method returns an array with the deleted items:
+*/
+arr4.splice(2,5,"mmmmmm",'ssssss',111111,'rrrrrrrr');
+console.log(arr4);
+console.log("----------SPLICE TO DELETE---------------\n");
+console.log("Removed elements are ",arr4.splice(2,4));
+console.log("----------SLICE--------------------\n");
+/*The slice() method creates a new array.
+The slice() method does not remove any elements from the source
+array. */
+console.log(arr4);
+let val = arr4.slice(3,6);
+console.log(val);
+console.log("------------------FINDING MAX AND MIN----------------");
+let newArray = [87,3,47,98,77,4,55,10,76,4,38,89,76,33,46,20,11,10];
+newArray.sort();
+console.log(newArray);
+console.log("Miimum is "+newArray[0]+"\nMaximum is "+newArray[newArray.length-1]);
+console.log('---------------------SORTING ARRAY--------------------');
+let sample = ['xerox','Mango','Guava','Pomagranate','Tomato','Brinjal','Banana'];
+sample.sort();
+console.log(sample);
+console.log("------------SORTING USING FUNCTION------------------");
+let points = [23,44,5,90,11,98,7,675,7,22,90,87,6,5,23,44,51,111];
+points.sort(function(a,b){
+    return a-b;
+});
+console.log("Ascending order is ");
+console.log(points);
+console.log("Descending order is ");
+points.sort(function(a,b)
+{
+    return b-a;
+});
+console.log(points);
+function minArray(points){
+   return Math.min.apply(null,points);
+}
