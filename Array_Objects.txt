@@ -1,0 +1,58 @@
+console.log("**************OBJECTS IN ARRAYS*********************");
+console.log("----------CREATION OF ARRAY OBJECTS----------------");
+let car = [
+    { 
+        carName : "Benz",
+        carno : 1234,
+        carPrice: 9876,
+        fuel : "Petrol",
+        color : "Blue"
+    },
+    {
+        carName : "Audi",
+        carNo : 5678,
+        carPrice: 90876,
+        fuel : "Diesel",
+        color : "Blck"
+    }
+];
+console.log(car);
+console.log("---------------Accessing array elements---------------");
+console.log(car[0].carName);
+console.log("----------------Updating array elements----------------");
+car[1].carName = 'Rolls Royce';
+console.log(car[1]);
+console.log("------------------For Of Loop---------------------");
+for(let i of car){
+    console.log(i);
+}
+console.log(car.carName);
+console.log("------------------For Each--------------------------");
+
+car.forEach((val,index) =>{
+    console.log("car["+index+"]="+val);
+    console.log(val);
+});
+console.log("---------------PUSH-----------------------");
+car.push({
+    carName:"Audi",
+    carNo: 8976,
+    carPrice: 34570,
+    fuel : "Kerosene",
+    color : "Green"
+});
+console.log(car);
+console.log("-------------FIND-----------------------");
+let res = car.find(car=>car.carName =="Rolls Royce" && car.fuel == "Diesel");
+console.log("Finding Rolls Royce wth fuel Diesel car..");
+console.log(res);
+console.log("--------------------FITER----------------------");
+console.log("Filtering cars with color GREEN");
+var greenCar = car.filter(car =>car.color === "Green");
+console.log(greenCar);
+console.log("------------------MAP----------------------");
+car.map((val,index) =>
+{
+    console.log(val);
+});
+
